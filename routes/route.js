@@ -2,8 +2,8 @@ const router = require('express').Router();
 const createTicket = require('../controllers/create');
 
 
-router.route('/create').post(createTicket.createTicket,(req,res)=>{
-    console.log("in progress");
+router.post('/create',createTicket.createTicketP(),(req,res)=>{
+    res.send("in progress");
 });
 
 
